@@ -1,4 +1,4 @@
-//main.scss > main.css
+//styles.scss > styles.css
 @import "variables";
 
 
@@ -15,28 +15,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
-@media only screen and (max-width: 800px) {
-    main {
-        grid-template-columns: 1fr !important;
-    }
-    .toDoTitles {
-        grid-column: 1;
-    }
-    .formSection {
-        grid-column: 1;
-    }
-    //.toDos {
-        //width: 100% !important; (Usikker om du ville ha alle ToDos på 1 kollonne eller om du bare mente hele grid kolonnen)
-    //}
-}
 //Header & Nav
 header {
     text-align: center;
     grid-column: 1;
     margin-left: 10px;
-
-
 }
 
 nav {
@@ -54,7 +37,7 @@ nav {
 
 //Main
 main {
-    margin-top: 10px;
+    margin: 10px 10px 0 10px;
     display: grid;
     grid-gap: 0.5em;
     grid-template-columns: 1.8fr 3fr 1.8fr;
@@ -142,4 +125,14 @@ button {
     border: 0;
     border-radius: 4px;
     padding: 5px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    main {
+        grid-template-columns: 0.3fr 1fr 0.3fr !important;
+    }
+    .toDos {
+        width: 100% !important;
+    }
 }
